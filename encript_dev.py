@@ -23,7 +23,7 @@ logo = verde + f"""
 z=0
 for i in emojis:
     z=z+1
-print(z)
+print("cargados "+str(z)+" emojis")
 print()
 print()
 
