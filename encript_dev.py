@@ -20,6 +20,13 @@ logo = verde + f"""
                                        ::::                            :::        : : ::            
            
 """
+z=0
+for i in emojis:
+    z=z+1
+print(z)
+print()
+print()
+
 print(logo)
 ms = input("Mensaje: ")
 print()
