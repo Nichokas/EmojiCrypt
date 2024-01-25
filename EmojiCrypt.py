@@ -47,13 +47,20 @@ except ValueError:
 if key==0:
     sys.exit("La key no puede ser 0")
 
-for letra in ms:
-    num = caracteres.get(letra)
-    try:
-        fusion = num * key
-    except TypeError:
-        sys.exit(Fore.RED+"ERROR: Actualmente el script solo funciona con letras y los simbolos ,.;:-_/*-+()%&\"! y los espacios")
-    while fusion > int(z):
-        fusion = fusion-int(z)
-    final = emojis[fusion]
-    print(final)
+finals = []  # Crear una lista vacía para almacenar todos los "final"
+
+def crypt(key, ms):
+    finals = []
+    for letra in ms:
+        num = caracteres.get(letra)
+        try:
+            fusion = num * key
+        except TypeError:
+            sys.exit(Fore.RED+"ERROR: Actualmente el script solo funciona con letras y los simbolos ,.;:-_/*-+()%&\"! y los espacios")
+        while fusion > int(z):
+            fusion = fusion-int(z)
+        final = emojis[fusion]
+        finals.append(final)  
+    return ''.join(finals)
+
+print(crypt(key, ms))
