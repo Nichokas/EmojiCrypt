@@ -59,4 +59,4 @@ for x in ms:
         final = emojis[fusion]
         print(final)
     except:
-        print()
+        print("Error")
