@@ -8,6 +8,7 @@ To install EmojiCrypt, you need to have Python 3 installed on your computer. You
 
 Then, you just have to clone this repository in your preferred directory:
 `git clone https://github.com/your-username/EmojiCrypt.git`
+
 `cd EmojiCrypt`
 
 ## How to use it
