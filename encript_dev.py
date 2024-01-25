@@ -29,7 +29,8 @@ logo = verde + f"""
 z=0
 for i in emojis:
     z=z+1
-print("cargados "+str(z)+" emojis")
+z=str(z)
+print("cargados "+z+" emojis")
 print()
 print()
 
@@ -46,17 +47,10 @@ except ValueError:
 if key==0:
     sys.exit("La key no puede ser 0")
 
-for x in ms:
-    x = x * key
-    try:
-        num = caracteres.get(letra)
-        fusion = num * key
-        while True:
-          if fusion > n_emojis:
-            fusion = fusion-n_emojis
-          else:
-            break
-        final = emojis[fusion]
-        print(final)
-    except:
-        print("Error")
+for letra in ms:
+    num = caracteres.get(letra)
+    fusion = num * key
+    while fusion > int(z):
+        fusion = fusion-int(z)
+    final = emojis[fusion]
+    print(final)
