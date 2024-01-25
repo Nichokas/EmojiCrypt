@@ -50,5 +50,13 @@ for x in ms:
     x = x * key
     try:
         num = caracteres.get(letra)
+        fusion = num * key
+        while True:
+          if fusion > n_emojis:
+            fusion = fusion-n_emojis
+          else:
+            break
+        final = emojis[fusion]
+        print(final)
     except:
         print()
