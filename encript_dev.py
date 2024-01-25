@@ -34,7 +34,7 @@ print()
 print()
 
 print(logo)
-ms = input("Mensaje: ")
+ms = input("Mensaje: ").lower()
 print()
 key = input("Key: ")
 print()
