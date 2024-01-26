@@ -1,4 +1,4 @@
-from EmojiCrypt import crypt
+from EmojiCrypt import encrypt
 
 def test_letters():
-    assert crypt(2, "hello")
+    assert encrypt(3, "Pez") == "🦿🤌🦁"
