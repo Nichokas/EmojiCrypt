@@ -29,4 +29,4 @@ Fork the repository and create a branch with your changes. Then, make a pull req
 Share the project with your friends, social networks or developer communities.
 
 ### License
-EmojiCrypt is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, which you can consult in the LICENSE.md file of this repository.
+EmojiCrypt is licensed under the GNU GENERAL PUBLIC LICENSE Version 3, which you can consult in the LICENSE file of this repository.
