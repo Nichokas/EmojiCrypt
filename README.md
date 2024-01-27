@@ -1,5 +1,8 @@
 # EmojiCrypt
 EmojiCrypt is an open source project that allows you to encrypt and decrypt messages using emojis. It is a fun and creative way to communicate with your friends, family or colleagues.
+
+![](https://i.ibb.co/6Dy2941/141shots-so.png)
+
 ## How it works
 EmojiCrypt uses a simple algorithm to convert each letter and symbol of your message into a corresponding emoji, according to a numerical key that you choose. For example, if your key is 3, the letter “a” becomes the emoji 😁, the letter “b” becomes the emoji 🤣, and so on. To decrypt the message, you just have to do the reverse process, using the same key.
 ## How to install it
