@@ -19,7 +19,12 @@ def encrypt(key, ms):
     finals = []
     ms = ms.lower()
     for letra in ms:
-        num = caracteres.get(letra) + caracteres.get(caracter)
+        if type(letra) == "NoneType":
+            num = caracteres.get(caracter)
+        if type(caracter) == "NoneType":
+            num = caracteres.get(letra)
+        else:
+            num = caracteres.get(letra) + caracteres.get(caracter)
         fusion = int(num) * int(key)
         while fusion > int(z):
             fusion = fusion-int(z)
