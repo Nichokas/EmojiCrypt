@@ -16,14 +16,12 @@ for i, caracter in enumerate(' ,.;:-_/*-+()%&"!?$', 27):
     caracteres[caracter] = i
 
 
-def encrypt(key, ms):
+def encrypt(ms):
     finals = []
     ms = ms.lower()
     for letra in ms:
         num = caracteres.get(letra, 0) + caracteres.get(caracter, 0)
-        fusion = int(num) * int(key)
-        while fusion > int(z):
-            fusion = fusion - int(z)
+        fusion = int(num)
         final = emojis[fusion]
         finals.append(final)
     return "".join(finals)
@@ -57,19 +55,10 @@ def main():
     print(logo)
     ms = input("Mensaje: ")
     print()
-    key = input("Key: ")
-    print()
-
-    try:
-        key = int(key)
-    except ValueError:
-        sys.exit("La key no es un numero")
-    if key == 0:
-        sys.exit("La key no puede ser 0")
 
     finals = []  # Crear una lista vacía para almacenar todos los "final"
 
-    print(encrypt(key, ms))
+    print(encrypt(ms))
 
 
 if __name__ == "__main__":
