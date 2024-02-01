@@ -1,5 +1,4 @@
 from colorama import Fore
-import sys
 
 caracteres = {}
 emojis = [
