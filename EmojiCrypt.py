@@ -21,8 +21,7 @@ def encrypt(ms):
     ms = ms.lower()
     for letra in ms:
         num = caracteres.get(letra, 0) + caracteres.get(caracter, 0)
-        fusion = int(num)
-        final = emojis[fusion]
+        final = emojis[int(num)]
         finals.append(final)
     return "".join(finals)
 
