@@ -9,6 +9,7 @@ for i in emojis:
     z = z + 1
 z = str(z)
 
+
 caracteres = {}
 for i, letra in enumerate("abcdefghijklmnopqrstuvwxyz", 1):
     caracteres[letra] = i
