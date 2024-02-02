@@ -25,6 +25,16 @@ def encrypt(ms):
         finals.append(final)
     return "".join(finals)
 
+def decrypt(ms):
+    finals = []
+    for emoji in ms:
+        if emoji in emojis:
+            num = emojis.index(emoji)
+            for key, value in caracteres.items():
+                if value == num:
+                    finals.append(key)
+    return "".join(finals)
+
 
 def main():
     verde = Fore.GREEN
@@ -48,16 +58,26 @@ def main():
     """
     )
 
+    print(logo)
+
     print()
     print()
 
-    print(logo)
+    print("1. Encrypt")
+    print("2. Descrypt")
+    print()
+
+    option = input("Select an option:")
+
     ms = input("Mensaje: ")
     print()
 
     finals = []  # Crear una lista vacía para almacenar todos los "final"
 
-    print(encrypt(ms))
+    if str(option) == "1" or option == "1.":
+        print(encrypt(ms))
+    elif str(option) == "2" or option == "2.":
+        print(decrypt(ms))
 
 
 if __name__ == "__main__":
