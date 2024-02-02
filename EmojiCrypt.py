@@ -10,7 +10,7 @@ z = str(z)
 
 
 caracteres = {}
-for i, letra in enumerate("abcdefghijklmnopqrstuvwxyz", 1):
+for i, letra in enumerate("abcdefghijklmnopqrstuvwxyz", 0):
     caracteres[letra] = i
 for i, caracter in enumerate(' ,.;:-_/*-+()%&"!?$', 27):
     caracteres[caracter] = i
@@ -25,15 +25,6 @@ def encrypt(ms):
         finals.append(final)
     return "".join(finals)
 
-def decrypt(ms):
-    finals = []
-    for emoji in ms:
-        if emoji in emojis:
-            num = emojis.index(emoji)
-            for key, value in caracteres.items():
-                if value == num:
-                    finals.append(key)
-    return "".join(finals)
 
 
 def main():
@@ -74,10 +65,12 @@ def main():
 
     finals = []  # Crear una lista vacía para almacenar todos los "final"
 
-    if str(option) == "1" or option == "1.":
-        print(encrypt(ms))
-    elif str(option) == "2" or option == "2.":
-        print(decrypt(ms))
+    if option == '1':
+        print("Mensaje cifrado: ", encrypt(ms))
+    elif option == '2':
+        print("Mensaje descifrado: ", decrypt(ms))
+    else:
+        print("Opción no válida")
 
 
 if __name__ == "__main__":
