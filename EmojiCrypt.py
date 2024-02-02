@@ -67,8 +67,6 @@ def main():
 
     if option == '1':
         print("Mensaje cifrado: ", encrypt(ms))
-    elif option == '2':
-        print("Mensaje descifrado: ", decrypt(ms))
     else:
         print("Opción no válida")
 
