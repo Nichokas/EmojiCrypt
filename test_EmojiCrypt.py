@@ -2,7 +2,7 @@ from EmojiCrypt import encrypt
 
 
 def test_letters():
-    assert encrypt("Pez") == "🥶😔🧐"
+    assert encrypt("Pez") == "🥵😌🤓"
     assert encrypt("ElPezEstaRaro") == "😔🤢🥶😔🧐😔😵‍💫🤯😮‍💨😵😮‍💨😵🥵"
 
 
