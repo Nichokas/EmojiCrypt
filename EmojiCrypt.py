@@ -1,4 +1,5 @@
 from colorama import Fore
+import sys
 
 emojis={'a': '😀', 'b': '🤓', 'c': '👀', 'd': '😁', 'e': '😆', 'f': '😅', 'g': '🤣', 'h': '😂', 'i': '🙂', 'j': '🙃', 'k': '🫠', 'l': '😉', 'm': '😊', 'n': '😇', 'o': '🥰', 'p': '😍', 'q': '🤩', 'r': '😘', 's': '😗', 't': '😚', 'u': '😙', 'v': '🥲', 'w': '😋', 'x': '😛', 'y': '😜', 'z': '🤪', ' ': '😝', ',': '🤑', '.': '🤗', ';': '🤭', ':': '🫢', '-': '🤐', '_': '🤫', '/': '🤔', '*': '🫡', '+': '🤨', '(': '😐', ')': '😑', '%': '😶', '&': '🫥', '"': '🥵', '!': '😏', '?': '😒', '$': '🙄', "'": '😬'}
 
@@ -14,6 +15,14 @@ def encrypt(ms):
     return "".join(finals)
 
 
+def decrypt(ms):
+    finals = []
+    for emoji in ms:
+        for key, value in emojis.items():
+            if emoji == value:
+                finals.append(key)
+                break
+    return "".join(finals)
 
 def main():
     verde = Fore.GREEN
@@ -48,15 +57,17 @@ def main():
 
     option = input("Select an option:")
 
-    ms = input("Mensaje: ")
+    ms = input("Message: ")
     print()
 
     finals = []  # Crear una lista vacía para almacenar todos los "final"
 
-    if option == '1':
-        print("Mensaje cifrado: ", encrypt(ms))
+    if option == "1":
+        print("Message: ", encrypt(ms))
+    if option == "2":
+        print("Message:", decrypt(ms))
     else:
-        print("Opción no válida")
+        sys.exit()
 
 
 if __name__ == "__main__":
