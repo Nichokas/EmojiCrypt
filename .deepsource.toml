@@ -3,6 +3,9 @@ version = 1
 test_patterns = ["test_EmojiCrypt.py"]
 
 [[analyzers]]
+name = "test-coverage"
+
+[[analyzers]]
 name = "secrets"
 
 [[analyzers]]
